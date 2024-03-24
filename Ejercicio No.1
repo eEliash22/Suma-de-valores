@@ -1,0 +1,29 @@
+package jv.esgh.sumalista;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SumaListaNumeros {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        List<Integer> numeros = new ArrayList<>();
+
+        System.out.print("Ingrese la cantidad de numeros: ");
+        int cantidadNumeros = scanner.nextInt();
+
+        for (int i = 0; i < cantidadNumeros; i++) {
+            System.out.print("Ingrese el numero " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+            numeros.add(numero);
+        }
+
+        int suma = 0;
+        for (int numero : numeros) {
+            suma += numero;
+        }
+        
+        System.out.println("La suma total es de : " + suma);
+}
+}
