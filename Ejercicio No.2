@@ -1,0 +1,43 @@
+package jv.esgh.listavocales;
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class VocalesConsonantes {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese un Texto: ");
+        String cadena = scanner.nextLine();
+        
+        ArrayList<Character>listadeMayusculas = new ArrayList<>();
+        ArrayList<Character>listaMinusculas = new ArrayList<>();
+        
+        for (int i = 0; i < cadena.length(); i ++) {
+        	char c = cadena.charAt(i);
+        	
+        	if (c== 'A' || c== 'E' || c== 'I' || c== 'O' || c== 'U' ||c== 'a' ||c== 'e' ||c== 'i' ||c== 'o' ||c== 'u') {
+        	
+    listadeMayusculas.add(c);    	
+	} else if (c == 'b' || c == 'd' || c == 'f' || c == 'g' || c ==
+    		'h'|| c == 'j' || c == 'k' || c == 'l' || c == 'm' ||
+    		c == 'n' || c == 'p' || c == 'q' || c == 'r' || c == 's'
+    		|| c == 't' || c == 'v' || c == 'x' || c == 'z' || c == 
+    		'w' || c == 'y' ||c == 'b' || c == 'd' || c == 'f' || c 
+    		== 'g' || c == 'h'|| c == 'j' || c == 'k' || c == 'l' || 
+    		c == 'm' || c == 'n' || c == 'p' || c == 'q' || c == 'r' 
+    		|| c == 's' || c == 't' || c == 'v' || c == 'x' || c == 
+    		'z' || c == 'w' || c == 'y' ||c == 'B' || c == 'D' || c
+    		== 'F' || c == 'G' || c == 'H'|| c == 'J' || c == 'K' ||
+    		c == 'L' || c == 'M' || c == 'N' || c == 'P' || c == 'Q' || c == 'R' || c == 'S'
+    		|| c == 'T' || c == 'V' || c == 'X' || c == 'Z' || c == 
+    		'W' || c == 'Y' )  {
+    	listaMinusculas.add(c);
+    }
+}
+System.out.println("Total de Mayusculas: " + listadeMayusculas);
+System.out.println("Total de Minusculas: " + listaMinusculas);
+scanner.close();
+}
+}
